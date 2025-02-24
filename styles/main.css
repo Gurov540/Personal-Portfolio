@@ -1,0 +1,122 @@
+@import url(normalize.css);
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #007acc;
+  --accent-hover-color: #005bb5;
+  --accent-active-color: #003f87;
+  --border-color: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #bb86fc;
+  --accent-hover-color: #9f63d6;
+  --accent-active-color: #7e3eb0;
+  --border-color: #333;
+}
+
+/* Global style */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem 10rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* header */
+.header {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+.nav__logo-image {
+  width: 4rem;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__intro {
+  height: 100%;
+  align-content: center;
+}
+
+/* main */
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.projects,
+.experience,
+.education {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid var(--border-color);
+}
+.projects__list {
+  padding-left: 0;
+  text-wrap: nowrap;
+  margin: 0;
+}
+.projects__item {
+  margin-bottom: 1rem;
+}
+.projects__link {
+  color: var(--text-color);
+}
+.experience__article:first-of-type .experience__company {
+  margin-top: 0;
+}
+.education p {
+  margin-top: 0;
+}
+
+/* footer */
+.footer {
+  border-top: 2px solid var(--border-color);
+}
+.reviews__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.reviews__item {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+}
+.footer__copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px solid var(--border-color);
+}
