@@ -23,7 +23,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 1rem 10rem;
+  padding: 0 10%;
 }
 ul {
   list-style: none;
@@ -32,6 +32,10 @@ ul {
 a {
   color: var(--accent-color);
   text-decoration: none;
+}
+a:hover,
+button:hover {
+  cursor: pointer;
 }
 
 /* header */
@@ -60,6 +64,35 @@ a {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+.nav__item {
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+.nav__item:hover {
+  border-bottom: 2px solid var(--accent-hover-color);
+}
+.nav__item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #3498db;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+li:hover::after {
+  width: 100%;
+}
+.theme-switch {
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 .header__intro {
   height: 100%;
@@ -119,4 +152,20 @@ a {
   margin-top: 2rem;
   padding: 1rem;
   border-top: 2px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .reviews__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
