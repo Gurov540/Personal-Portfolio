@@ -1,5 +1,12 @@
 @import url(normalize.css);
 
+.nunito-<uniquifier > {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
@@ -20,7 +27,7 @@
 
 /* Global style */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 0 10%;
@@ -51,6 +58,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
+  font-weight: 700;
   border-bottom: 2px solid var(--border-color);
 }
 .nav__logo {
@@ -63,7 +71,7 @@ button:hover {
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
 }
 .nav__item {
   border-bottom: 2px solid transparent;
@@ -156,8 +164,10 @@ li:hover::after {
 
 @media (max-width: 768px) {
   .nav {
+    max-width: 100%;
     flex-direction: column;
     align-items: center;
+    font-size: 1rem;
   }
   .main {
     flex-direction: column;
