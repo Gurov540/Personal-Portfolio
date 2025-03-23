@@ -19,6 +19,10 @@
 
 /* Global style */
 body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
   font-family: Nunito, Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -111,6 +115,7 @@ li:hover::after {
   display: flex;
   justify-content: center;
   gap: 20px;
+  border-top: 2px solid var(--border-color);
 }
 .projects,
 .experience,
@@ -178,4 +183,20 @@ li:hover::after {
     justify-content: center;
     align-items: center;
   }
+}
+
+.projects {
+}
+.project-list {
+}
+.project-item {
+}
+.project-title {
+}
+.project-description {
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
 }
